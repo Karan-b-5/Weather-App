@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <h1>Search &nbsp;&nbsp; for &nbsp;&nbsp; Weather &nbsp;&nbsp;  updates</h1>
+
+        <div class="tab-container">
+            <p class="tab" data-userWeather>Your Location</p>
+            <p class="tab" data-searchWeather>Search Location</p>
+        </div>
+
+        <div class="weather-details-container">
+
+            <!-- Grant Location Access Container -->
+            <div class="sub-container grant-location-container">
+                <img src="./assets/location.png" alt="" width="80" height="80" loading="lazy">
+                <p>Grant &nbsp; Location &nbsp; Access</p>
+                <p>Allow Access to get Weather Information</p>
+                <button class="btn" data-grantAccess>Grant Access</button>
+            </div>
+
+            <!-- Search form Container -->
+            <form class="form-container" data-searchForm>
+                <input placeholder="Search For City..." data-searchInput>
+                <button class="btn" type="submit">
+                    <img src="./assets/search.png" alt="" width="20" height="20" loading="lazy">
+                </button>
+            </form>
+
+            <!-- Loading Screen Container -->
+            <div class="sub-container loading-container">
+                <img src="./assets/loading.gif" width="150" height="150" loading="lazy">
+                <p>Loading...</p>
+            </div>
+
+            <!-- Weather Info Container -->                                 
+            <div class="sub-container weather-info-container">
+
+                <!-- City Name & Flag -->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryFlag>
+                </div>
+
+                <!-- Weather Description -->
+                <p data-weatherDesc></p>
+                <!-- Weather Icon -->
+                <img data-weatherIcon>
+                <!-- Temperatue -->
+                <p data-temp></p>
+
+                <!-- 3 cards showing Weather Parameters -->
+                <div class="parameter-container">
+                    <!-- Card 1 -->
+                    <div class="parameter">
+                        <img src="./assets/wind.png" alt="">
+                        <p>WindSpeed</p>
+                        <p data-windspeed></p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="parameter">
+                        <img src="./assets/humidity.png" alt="">
+                        <p>Humidity</p>
+                        <p data-humidity></p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="parameter">
+                        <img src="./assets/cloud.png" alt="">
+                        <p>Clouds</p>
+                        <p data-clouds></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image to be shown on error -->
+            <div class="error">
+                <img class="errorImage" src="https://cdni.iconscout.com/illustration/premium/thumb/no-address-found-illustration-download-in-svg-png-gif-file-formats--location-app-finding-permission-results-empty-state-error-pack-design-development-illustrations-3613886.png'" width="300" height="300" alt="Error">
+            </div>
+            
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

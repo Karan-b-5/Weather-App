@@ -3,7 +3,7 @@
 Welcome to the Weather App! This is a web-based application built using HTML, CSS, and JavaScript. The app allows users to get real-time weather information for any location in the world. Users can either get the weather for their current location or search for the weather in a specific location.
 
 ## Live Demo
-Check out the live demo of the weather app [here](YOUR_LIVE_LINK).
+Check out the live demo of the weather app [here](https://search-for-weather.netlify.app/).
 
 ## How to Use
 1. Open the weather app in your web browser.
